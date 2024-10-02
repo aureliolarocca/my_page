@@ -1,0 +1,466 @@
+body {
+  background-color: #02606c;
+  width: 100vw;
+
+  margin: 0;
+  padding: 0;
+  height: 10000px;
+  overflow-x: hidden;
+  font-family: "Noto Sans", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav {
+  width: 100vw;
+  height: 5rem;
+  background-color: #ecf0f1;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  z-index: 9999;
+  border-bottom: 1px solid black;
+}
+
+nav div:nth-of-type(1) {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  border: 1px solid black;
+}
+
+nav div:nth-of-type(2) {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  border: 1px solid black;
+}
+
+nav div svg:nth-of-type(1) {
+  width: 3rem;
+  fill: #181717;
+}
+
+nav div svg:nth-of-type(2) {
+  width: 3rem;
+  fill: #0a66c2;
+}
+
+nav div svg:nth-of-type(1):hover {
+  width: 4rem;
+  fill: #181717;
+}
+
+nav div svg:nth-of-type(2):hover {
+  width: 4rem;
+  fill: #0a66c2;
+}
+
+/* Hamburger Menu styles */
+#ham-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #02606c;
+  border: 1px solid white;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+#mobile-menu p {
+  margin: 1rem 0;
+}
+
+#mobile-menu a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #02606c;
+  background-position: center;
+  overflow: hidden;
+}
+h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 7rem;
+  margin: 0;
+  color: whitesmoke;
+  text-align: center;
+  border: 5px solid rgb(0, 114, 15);
+}
+#animation-h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 3.5rem;
+  margin: 0;
+  color: whitesmoke;
+  border: 5px solid rgb(3, 70, 31);
+}
+.container-memoji {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 100%;
+  animation-name: memojiAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  background: rgb(118, 199, 199);
+  background: radial-gradient(
+    circle,
+    rgba(118, 199, 199, 1) 10%,
+    rgba(2, 96, 108, 1) 60%
+  );
+  border: 1px solid black;
+}
+.container-title {
+  width: 60%;
+  height: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.container-title div {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid black;
+}
+.container-title div svg:nth-of-type(1) {
+  width: 7rem;
+  fill: #e34f26;
+}
+.container-title div svg:nth-of-type(2) {
+  width: 7rem;
+  fill: #1572b6;
+}
+.container-title div svg:nth-of-type(3) {
+  width: 7rem;
+  fill: #f7df1e;
+}
+.container-title div svg:nth-of-type(4) {
+  width: 7rem;
+  fill: #61dafb;
+}
+.container-title div svg:nth-of-type(5) {
+  width: 7rem;
+  fill: #0f0f11;
+}
+.container-title div svg:hover {
+  fill: white;
+}
+
+#memoji {
+  width: 22rem;
+
+  position: relative;
+  border: 1px solid rgb(255, 255, 255);
+}
+.memojiChange {
+  width: 10rem;
+
+  animation-name: memojiChange;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes memojiChange {
+  0% {
+    width: 10rem;
+    opacity: 0.4;
+  }
+  50% {
+    width: 15rem;
+    opacity: 0.7;
+  }
+  75% {
+    width: 20rem;
+    opacity: 0.9;
+  }
+  100% {
+    width: 25rem;
+    opacity: 1;
+  }
+}
+@keyframes memojiAnimation {
+  0% {
+    left: 100%;
+  }
+  70% {
+    left: -5%;
+  }
+  100% {
+    left: 0;
+  }
+}
+/*Fine HEADER INIZIO MAIN*/
+main {
+  width: 100vw;
+  height: calc(100vh - 5rem);
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 2.4rem;
+  margin: 0 auto;
+  color: whitesmoke;
+}
+/* Stile generale per il carousel */
+/* Stile generale per il carousel */
+.swiper-container {
+  width: 50%; /* Larghezza del contenitore */
+  height: 90%; /* Altezza del contenitore */
+  margin: 0 auto; /* Margini superiori e inferiori */
+  perspective: 1000px; /* Per effetto 3D */
+}
+
+.swiper-wrapper {
+  align-items: center; /* Allinea le card al centro */
+}
+
+.swiper-slide {
+  width: 20rem; /* Larghezza delle card */
+  height: 30rem; /* Altezza delle card */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #02606c;
+  padding: 2rem;
+}
+
+/* Stile per le immagini */
+.swiper-slide div {
+  width: 38rem;
+  height: 28rem; /* Altezza delle immagini */
+  border-radius: 15px;
+  background-position: center;
+  background-size: cover;
+
+  margin: 0 auto;
+  border: 1px solid white;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.6); /* Box shadow */
+}
+#project1 {
+  background-image: url(otpValidatorImg.png);
+}
+#project2 {
+  background-image: url(iphoneCalculatorImg.png);
+  width: 35rem;
+  height: 29rem;
+}
+#project3 {
+  background-image: url(TrisGameImg.png);
+  height: 29rem;
+  width: 35rem;
+  border: none;
+  background-size: contain;
+  box-shadow: none;
+}
+#project4 {
+  background-image: url(slotMachineImg.png);
+}
+
+/* Stile per il titolo e la descrizione */
+.swiper-slide h3 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.swiper-slide p {
+  font-size: 1.1rem;
+  color: whitesmoke;
+
+  text-align: center;
+}
+.swiper-slide a {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  margin-top: 5px;
+  text-align: center;
+  color: #2994ff;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+.swiper-slide a:hover {
+  text-decoration: none;
+}
+/* Pulsanti di navigazione */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* Colore del testo */
+  width: 30px; /* Larghezza del pulsante */
+  height: 30px; /* Altezza del pulsante */
+  border-radius: 50%; /* Angoli arrotondati */
+  background: rgba(0, 0, 0, 0.5); /* Sfondo scuro semi-trasparente */
+  display: flex; /* Flexbox per centrare */
+  justify-content: center; /* Centrare contenuto orizzontalmente */
+  align-items: center; /* Centrare contenuto verticalmente */
+  position: absolute; /* Posizione assoluta per posizionamento */
+  top: 50%; /* Centrato verticalmente */
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+/* Posizione dei pulsanti */
+.swiper-button-next {
+  right: 10px; /* Posizione a destra */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Posizione a sinistra */
+}
+
+/* Pulsante hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.8); /* Sfondo più scuro quando è hoverato */
+}
+
+/* Icone dei pulsanti */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px; /* Dimensione del testo per le frecce */
+  color: #fff; /* Colore delle frecce */
+}
+
+.swiper-button-next::after {
+  content: "→"; /* Freccia destra */
+}
+
+.swiper-button-prev::after {
+  content: "←"; /* Freccia sinistra */
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 11px;
+  }
+  header {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+  .container-title {
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  h1 {
+    font-size: 7rem;
+  }
+  #animation-h2 {
+    font-size: 3.5rem;
+  }
+  #htmlSvg,
+  #cssSvg,
+  #jsSvg,
+  #reactSvg,
+  #angularSvg {
+    width: 5rem;
+  }
+  .container-memoji {
+    width: 100%;
+  }
+  .swiper-container {
+    width: 85%;
+    height: 70%;
+    margin-bottom: 3rem;
+  }
+  #project1,
+  #project2,
+  #project3,
+  #project4 {
+    width: 28rem;
+    height: 23rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+  .swiper-slide h3 {
+    font-size: 3rem;
+  }
+  .swiper-slide p {
+    font-size: 1.6rem;
+  }
+  .swiper-slide a {
+    font-size: 1.9;
+  }
+}
+
+/* Ham menu' */
+@media screen and (max-width: 768px) {
+  #menu-links {
+    display: none;
+  }
+  nav div:nth-of-type(2) {
+    width: 35%;
+  }
+
+  #ham-icon {
+    display: block;
+  }
+}
